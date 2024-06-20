@@ -1,5 +1,6 @@
 body {
-    background-color: $color-background;
+    background: rgb(249,246,244);
+background: linear-gradient(90deg, rgba(249,246,244,1) 0%, rgba(249,246,244,1) 100%);
     color: $color-text;
     font-display: optional;
     font-family: $font-family;

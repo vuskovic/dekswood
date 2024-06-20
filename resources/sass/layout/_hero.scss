@@ -1,0 +1,60 @@
+
+.hero {
+    background-image: url("../../../assets/img/hero.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    padding: 2em 10em;
+
+    &-navigation {
+        @include flex(flex, row, nowrap, space-between, center, center);
+
+        &-logo {
+            
+        }
+
+        &-list {
+            @include list-reset;
+            @include flex(flex, row, nowrap, space-between, center, center);
+    
+            li {
+                display: inline;
+                
+                a {
+                    color: #FFF;
+                    font-size: 23px;
+                    font-style: none;
+                    padding: .9em;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+    
+        }
+    
+    }    
+
+    &-main {
+        color: $color-text;
+        padding: 10em 25em 0 0;
+
+        &-head {
+            font-size: 3em;
+            font-weight: bolder;
+        }
+
+        &-sub {
+            font-size: 1.2em;
+            margin-bottom: 6.3em;
+        }
+
+        &-button {
+            background-color: $color-accent;
+            border-radius: 3px;
+            font-size: 1.6em;
+            padding: 0.4em 8em;
+        }
+    }
+}

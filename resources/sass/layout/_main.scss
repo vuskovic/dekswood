@@ -1,3 +1,132 @@
 .main {
-	
+    height: 2000px;
+    margin: 0px auto;
+    width: 90%;
+
+	&-divider {
+        @include flex(flex, row, nowrap, center, center, center);
+
+        &-line {
+            background-color: $color-accent;
+            height: 0.2em;
+            width: 3em;
+        }
+
+        &-text {
+            color: black;
+            font-size: 1.5em;
+            font-weight: bolder;
+            margin: 1.5em 0.5em;
+        }
+    }
+
+    &-section {
+        position: relative;
+        margin-bottom: 5em;
+
+        &-image {
+
+            &-first {
+                width: 35%;
+            }
+
+            &-second {
+                width: 70%;
+
+                }
+            }
+
+        &-content {
+            
+            &-first, &-second {
+                @include flex(flex, column, nowrap, space-evenly, center, center);
+                
+                padding: 20px;
+                position: absolute;
+                top: 2em;
+                width: 65%;
+            }
+            
+            &-first {
+                color: black;
+                background-color: white;
+                left: 15em;
+                height: 60%;
+            }
+
+            &-second {
+                background-image: url("../../../assets/img/section2dark_img.png");
+                background-size: cover;
+                background-position: 0;
+                height: 90%;
+                left: 20em;
+            }
+
+            &-title, &-text {
+                width: 90%;
+            }
+
+            &-title {
+                font-size: 1.5em;
+                font-weight: bolder;
+                text-align: left;
+
+                .accent {
+                    color: $color-accent;
+                    font-weight: bolder;
+                }
+            }
+
+            &-text {
+                &-list {
+                    position: relative;
+                    left: 15em;
+                }
+            }
+
+            &-button {
+
+                a {
+                    background-color: $color-accent;
+                    border-radius: 3px;
+                    color: white;
+                    font-size: 1.2em;
+                    padding: 0.4em 2em;
+
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+
+        }
+
+        &-services {
+            @include flex(flex, row, nowrap, space-around, center, center);
+            
+            margin-bottom: 15em;
+
+            &-service {
+                @include flex(flex, column, nowrap, space-around, left, center);
+                
+                max-height: 200px;
+                width: 20%;
+
+                img {
+                    margin: 0 auto;
+                    width: 5em;
+                }
+
+                p {
+                    color: black;
+                }
+
+                &-title {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
 }
